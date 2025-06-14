@@ -1,0 +1,47 @@
+# Node.js / npm
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build output
+dist/
+build/
+out/
+*.log
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Backup files
+backup/
+*_backup/
+full-backup.ps1
+
+# Project files (IDE)
+.idea/
+.vscode/
+*.suo
+*.ntvs_analysis.dat
+*.njsproj
+*.sln
+*.sw?
+
+# dotenv
+.env
+.env.*
+
+# Temp & archive
+*.tmp
+*.temp
+*.bak
+*.zip
+*.rar
+*.7z
+*.iso
+
+# Не нужные текстовые файлы, которые случайно могут остаться
+structure.txt
+Text Document.txt
