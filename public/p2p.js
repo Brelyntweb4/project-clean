@@ -1,23 +1,17 @@
-// p2p.js — клиентская часть P2P-обмена
+﻿// p2p.js — клиентская часть P2P-обмена
 
 let peers = [];
 let ws = null;
-<<<<<<< HEAD
-=======
 let myName = localStorage.getItem('brelynt-name') || 'User';
 const handshaked = new Set();
->>>>>>> a567cb9fd600710a89de5fe33d87fef9a9f7bf9b
 
 function startP2P(serverAddr = "ws://localhost:9090") {
     ws = new WebSocket(serverAddr);
 
     ws.onopen = () => {
         console.log("P2P: соединение установлено.");
-<<<<<<< HEAD
         ws.send(JSON.stringify({ type: "join", name: "User" }));
-=======
         ws.send(JSON.stringify({ type: "join", name: myName }));
->>>>>>> a567cb9fd600710a89de5fe33d87fef9a9f7bf9b
     };
 
     ws.onmessage = (event) => {
@@ -29,8 +23,6 @@ function startP2P(serverAddr = "ws://localhost:9090") {
         if (msg.type === "tx") {
             addRemoteTx(msg.tx);
         }
-<<<<<<< HEAD
-=======
         if (msg.type === "handshake") {
             console.log("Handshake от", msg.name);
             if (msg.name !== myName && !handshaked.has(msg.name)) {
@@ -38,7 +30,6 @@ function startP2P(serverAddr = "ws://localhost:9090") {
                 ws.send(JSON.stringify({ type: "handshake", name: myName }));
             }
         }
->>>>>>> a567cb9fd600710a89de5fe33d87fef9a9f7bf9b
     };
 
     ws.onclose = () => {

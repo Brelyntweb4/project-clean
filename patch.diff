@@ -1,0 +1,36 @@
+diff --git a/package.json b/package.json
+index 1234567..89abcde 100644
+--- a/package.json
++++ b/package.json
+@@
+ {
+   "name": "brelynt-electron",
+   "version": "0.1.0",
+   "description": "Autonomous Web4 wallet (MVP)",
+   "main": "main.js",
+-  "scripts": {
+-<<<<<<< HEAD
+-    "start": "electron ."
+-=======
+-    "start": "electron .",
+-    "dev":   "nodemon main.js"
+->>>>>>> ed6e53e
+-  },
++  "scripts": {
++    "start": "electron .",
++    "dev":   "nodemon main.js"
++  },
+   "author": "Brelynt",
+   "license": "MIT",
+   "dependencies": {
+-<<<<<<< HEAD
+-    "electron": "^29.0.0"
+-=======
+-    "electron": "^29.0.0"
+->>>>>>> ed6e53e
++    "electron": "^29.0.0"
+   },
+   "devDependencies": {
+     "nodemon": "^3.0.1"
+   }
+ }

@@ -1,9 +1,6 @@
-// filehub.js
-<<<<<<< HEAD
-=======
+﻿// filehub.js
 // Usage: run `node filehub.js` to start a small HTTP API on port 3040
 // for browsing and editing files inside the `public` directory.
->>>>>>> a567cb9fd600710a89de5fe33d87fef9a9f7bf9b
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
@@ -49,29 +46,23 @@ app.get('/api/tree', (req, res) => {
 
 // --- API: получить файл ---
 app.get('/api/file', (req, res) => {
-<<<<<<< HEAD
     const filePath = path.join(ROOT_DIR, req.query.path);
     if (!fs.existsSync(filePath)) return res.status(404).send('Not found');
-=======
     const filePath = path.resolve(ROOT_DIR, req.query.path || '');
     if (!filePath.startsWith(ROOT_DIR)) {
         return res.status(400).send('Invalid path');
     }
->>>>>>> a567cb9fd600710a89de5fe33d87fef9a9f7bf9b
     res.send(fs.readFileSync(filePath, 'utf-8'));
 });
 
 // --- API: сохранить файл ---
 app.post('/api/file', (req, res) => {
-<<<<<<< HEAD
     const filePath = path.join(ROOT_DIR, req.query.path);
     if (!fs.existsSync(filePath)) return res.status(404).send('Not found');
-=======
     const filePath = path.resolve(ROOT_DIR, req.body.path || '');
     if (!filePath.startsWith(ROOT_DIR)) {
         return res.status(400).send('Invalid path');
     }
->>>>>>> a567cb9fd600710a89de5fe33d87fef9a9f7bf9b
     fs.writeFileSync(filePath, req.body.content);
     res.send('OK');
 });
