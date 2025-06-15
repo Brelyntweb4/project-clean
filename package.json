@@ -6,19 +6,13 @@
   "scripts": {
     "start": "electron ."
   },
-<<<<<<< HEAD
-=======
   "license": "Apache-2.0",
->>>>>>> a567cb9fd600710a89de5fe33d87fef9a9f7bf9b
   "dependencies": {
     "cors": "^2.8.5",
     "electron": "^30.0.0",
     "express": "^5.1.0",
     "fs-extra": "^11.2.0",
-<<<<<<< HEAD
     "path": "^0.12.7",
-=======
->>>>>>> a567cb9fd600710a89de5fe33d87fef9a9f7bf9b
     "ws": "^8.18.2"
   }
 }
